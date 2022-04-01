@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVCREVISIEETT.Models.Customer>
+
+@{
+    ViewData["Title"] = "CustomerList";
+}
+
+<h1>CustomerList</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            C_Name
+        </th>
+        <th>
+            C_Email
+
+        </th>
+
+    </tr>
+    @foreach (var cust in Model)
+    {
+        <tr>
+            <td>
+                @cust.C_Name
+            </td>
+            <td>
+                @cust.C_Email
+            </td>
+
+
+        </tr>
+    }
+</table>
